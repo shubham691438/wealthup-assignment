@@ -9,7 +9,7 @@ export default function CodeComponent() {
 
   const generateCode = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/codes`);
+      const response = await fetch(`https://long-lime-sheep-suit.cyclic.app//api/codes`);
       const data = await response.json();
       setCode(data.code);
       setMessage('');
@@ -20,7 +20,7 @@ export default function CodeComponent() {
 
   const submitCode = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/codes/use`, {
+      const response = await fetch(`https://long-lime-sheep-suit.cyclic.app//api/codes/use`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
